@@ -2,10 +2,10 @@
 // import TWEEN from '../libs/tween.js-main/dist/tween.esm.js';
 // import {OrbitControls} from '../libs/three.js-master/examples/jsm/controls/OrbitControls.js';
 // import {GLTFLoader} from '../libs/three.js-master/examples/jsm/loaders/GLTFLoader.js';
-import * as THREE from './libs/three.module.js';
-import TWEEN from './libs/tween.esm.js';
+import * as THREE from '../libs/three.module.js';
+import TWEEN from '../libs/tween.esm.js';
 // import {OrbitControls} from '../libs/three.js-master/examples/jsm/controls/OrbitControls.js';
-import {GLTFLoader} from './libs/GLTFLoader.js';
+import {GLTFLoader} from '../libs/GLTFLoader.js';
 
 import { initCharacters, initCharacterGame, initCharacterKeybordEventListeners, pauseCharacterGame } from './animations.js';
 import { degToRad, playMusic, playSound } from './utils.js';
@@ -51,7 +51,7 @@ const settings = {
 /* ----- MODELS ----- */
 const models = {
     mario: {
-        url: './assets/3dmodels/mario/scene.gltf',
+        url: './assets/3Dmodels/mario/scene.gltf',
         name: "mario",
         mesh: new THREE.Object3D(),
         bones: {},
@@ -71,7 +71,7 @@ const models = {
         castShadow: true,
     },
     luigi: {
-        url: './assets/3dmodels/luigi/scene.gltf',
+        url: './assets/3Dmodels/luigi/scene.gltf',
         name: "luigi",
         mesh: new THREE.Object3D(),
         bones: {},
@@ -91,69 +91,69 @@ const models = {
         castShadow: true,
     },
     mushroom: {
-        url: './assets/3dmodels/mushroom/scene.gltf',
+        url: './assets/3Dmodels/mushroom/scene.gltf',
         castShadow: true,
     },
     star: {
-        url: './assets/3dmodels/star/scene.gltf',
+        url: './assets/3Dmodels/star/scene.gltf',
         castShadow: true,
     },
     coin: {
-        url: './assets/3dmodels/coin/scene.gltf',
+        url: './assets/3Dmodels/coin/scene.gltf',
         castShadow: true,
     },
     spike: {
-        url: './assets/3dmodels/spike/scene.gltf',
+        url: './assets/3Dmodels/spike/scene.gltf',
         castShadow: true,
     },
     roller: {
-        url: './assets/3dmodels/roller/scene.gltf',
+        url: './assets/3Dmodels/roller/scene.gltf',
         castShadow: true,
     },
     mystery_block: {
-        url: './assets/3dmodels/mystery_block/scene.gltf',
+        url: './assets/3Dmodels/mystery_block/scene.gltf',
     },
     brick_block: {
-        url: './assets/3dmodels/brick_block/scene.gltf',
+        url: './assets/3Dmodels/brick_block/scene.gltf',
     },
     pow_block: {
-        url: './assets/3dmodels/pow_block/scene.gltf',
+        url: './assets/3Dmodels/pow_block/scene.gltf',
     },
     pipe: {
-        url: './assets/3dmodels/pipe/scene.gltf',
+        url: './assets/3Dmodels/pipe/scene.gltf',
     },
     tree: {
-        url: './assets/3dmodels/tree/scene.gltf',
+        url: './assets/3Dmodels/tree/scene.gltf',
     },
     forest1: {
-        url: './assets/3dmodels/forest1/scene.gltf',
+        url: './assets/3Dmodels/forest1/scene.gltf',
     },
     cave: {
-        url: './assets/3dmodels/cave/scene.gltf',
+        url: './assets/3Dmodels/cave/scene.gltf',
     },
     crystal1: {
-        url: './assets/3dmodels/crystal1/scene.gltf',
+        url: './assets/3Dmodels/crystal1/scene.gltf',
     },
     crystal2: {
-        url: './assets/3dmodels/crystal2/scene.gltf',
+        url: './assets/3Dmodels/crystal2/scene.gltf',
     },
     crystal3: {
-        url: './assets/3dmodels/crystal3/scene.gltf',
+        url: './assets/3Dmodels/crystal3/scene.gltf',
     },
     planet: {
-        url: './assets/3dmodels/planet/scene.gltf',
+        url: './assets/3Dmodels/planet/scene.gltf',
     },
     rocket: {
-        url: './assets/3dmodels/rocket/scene.gltf',
+        url: './assets/3Dmodels/rocket/scene.gltf',
     },
     satellite: {
-        url: './assets/3dmodels/satellite/scene.gltf',
+        url: './assets/3Dmodels/satellite/scene.gltf',
     },
     spaceship: {
-        url: './assets/3dmodels/spaceship/scene.gltf',
+        url: './assets/3Dmodels/spaceship/scene.gltf',
     },
     ufo: {
-        url: './assets/3dmodels/ufo/scene.gltf',
+        url: './assets/3Dmodels/ufo/scene.gltf',
     }, 
 };
 /* ----- ----- ----- */
