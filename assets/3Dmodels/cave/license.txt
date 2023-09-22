@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cave wall
+* source:	https://sketchfab.com/3d-models/cave-wall-caa7df084ac64982b1022d760712a1d0
+* author:	Krzysztof Kauza (https://sketchfab.com/krzysztofkauza)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cave wall" (https://sketchfab.com/3d-models/cave-wall-caa7df084ac64982b1022d760712a1d0) by Krzysztof Kauza (https://sketchfab.com/krzysztofkauza) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,430 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1824,
+      "max": [
+        4.5,
+        4.5,
+        3.0
+      ],
+      "min": [
+        -4.5,
+        -4.5,
+        0.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 21888,
+      "componentType": 5126,
+      "count": 1824,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1824,
+      "max": [
+        4.300000190734863,
+        12.728158950805664
+      ],
+      "min": [
+        -4.300000190734863,
+        -12.728158950805664
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 8412,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 43776,
+      "componentType": 5126,
+      "count": 107,
+      "max": [
+        3.75,
+        3.75,
+        3.0
+      ],
+      "min": [
+        -3.75,
+        -3.75,
+        -18.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 45060,
+      "componentType": 5126,
+      "count": 107,
+      "max": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 14592,
+      "componentType": 5126,
+      "count": 107,
+      "max": [
+        3.0,
+        10.606799125671387
+      ],
+      "min": [
+        -18.0,
+        -10.606799125671387
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 33648,
+      "componentType": 5125,
+      "count": 432,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 46344,
+      "componentType": 5126,
+      "count": 66,
+      "max": [
+        3.75,
+        3.75,
+        3.0
+      ],
+      "min": [
+        -3.75,
+        -3.75,
+        -18.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 47136,
+      "componentType": 5126,
+      "count": 66,
+      "max": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 15448,
+      "componentType": 5126,
+      "count": 66,
+      "max": [
+        3.75,
+        3.75
+      ],
+      "min": [
+        -3.75,
+        -3.75
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 35376,
+      "componentType": 5125,
+      "count": 192,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Ludus101 (https://sketchfab.com/Ludus101)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/warp-pipe-e4db0ad645fc4a279e255660cc60e7e7",
+      "title": "Warp Pipe"
+    },
+    "generator": "Sketchfab-14.84.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 36144,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 15976,
+      "byteOffset": 36144,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 47928,
+      "byteOffset": 52120,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 100048,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Body2__0",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.04716463178649634,
+          0.667162779707386,
+          0.08906554244158575,
+          1.0
+        ],
+        "roughnessFactor": 0.18799999999999994
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Paint_-_Metallic_Green",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0466650863368801,
+          0.665387298282272,
+          0.08865558628577291,
+          1.0
+        ],
+        "roughnessFactor": 0.18799999999999994
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Paint_-_Metallic_Black",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.006072930432828698,
+          0.006072930432828698,
+          0.006072930432828698,
+          1.0
+        ],
+        "roughnessFactor": 0.1542831368628934
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Body1_Paint - Metallic (Green)_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Body2__0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Body2_Paint - Metallic (Black)_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        6.232233047485352,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.3838337248296088e-15,
+        -6.232233047485352,
+        0.0,
+        0.0,
+        6.232233047485352,
+        1.3838337248296088e-15,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.0010000000474974513,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0010000000474974513,
+        0.0,
+        0.0,
+        -0.0010000000474974513,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Super Mario Pipe.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        6
+      ],
+      "name": "Super Mario Pipe Stand - Mario v3"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        10.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        10.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        10.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Body1"
+    },
+    {
+      "mesh": 0,
+      "name": "Body1_Paint - Metallic (Green)_0"
+    },
+    {
+      "children": [
+        7,
+        8
+      ],
+      "matrix": [
+        10.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        10.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        10.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Body2"
+    },
+    {
+      "mesh": 1,
+      "name": "Body2__0"
+    },
+    {
+      "mesh": 2,
+      "name": "Body2_Paint - Metallic (Black)_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

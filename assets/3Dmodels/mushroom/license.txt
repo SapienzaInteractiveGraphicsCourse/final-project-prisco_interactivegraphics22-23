@@ -1,0 +1,11 @@
+Model Information:
+* title:	1- Up Mushroom (Blender)
+* source:	https://sketchfab.com/3d-models/1-up-mushroom-blender-104cd30be0db4dcc8c94539628ffdec1
+* author:	Derk3DStuff (https://sketchfab.com/Derk3DStuff)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "1- Up Mushroom (Blender)" (https://sketchfab.com/3d-models/1-up-mushroom-blender-104cd30be0db4dcc8c94539628ffdec1) by Derk3DStuff (https://sketchfab.com/Derk3DStuff) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

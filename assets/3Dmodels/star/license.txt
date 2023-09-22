@@ -1,0 +1,11 @@
+Model Information:
+* title:	super mario star
+* source:	https://sketchfab.com/3d-models/super-mario-star-cd988ff787734dec955cd76e8acdf327
+* author:	gaelinix (https://sketchfab.com/gaelinix)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "super mario star" (https://sketchfab.com/3d-models/super-mario-star-cd988ff787734dec955cd76e8acdf327) by gaelinix (https://sketchfab.com/gaelinix) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

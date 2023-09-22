@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Super Mario Runner</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.jpg">
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/loader.css" type="text/css">
+    <link rel="stylesheet" href="./css/transitions.css" type="text/css">
+    <link rel="stylesheet" href="./css/buttons.css" type="text/css">
+
+</head>
+<body>
+
+
+<div id="loader-animation" class="soft-shadow">
+    <div id="loader-wrapper">
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+        <div class="loader-shadow"></div>
+        <div class="loader-shadow"></div>
+        <div class="loader-shadow"></div>
+        <span id="loadingText">Loading Models</span>
+    </div>
+
+    <div id="loading">
+
+        <div id="loadedText"></div>
+
+        <button id="goButton" hidden>Go</button>
+
+
+    </div>
+
+</div>
+
+
+<div id="page-transition-static"></div>
+
+
+<div id="background" hidden></div>
+
+
+<button id="settingsButton" hidden></button>
+<div class="menuSettings-wrapperOff" id="menuSettings-wrapper">
+
+<div class="menuSettings-background-wrapper"></div>
+    <table class="menuSettings" id="menuSettings">
+        <tr>
+            <td>
+                <button id="backButton"></button>
+            </td>
+            <td>
+                <div class="menuSettings-title">Settings</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="menuSettings-description2">Toggle Music</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="audioButtonSettings musicButtonOn" id="musicButton"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="menuSettings-description2">Toggle Sound</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="audioButtonSettings soundButtonOn" id="soundButton"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="menuSettings-description2">Quality:</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="quality-button-wrapper"><button class="quality-button" id="lowButton">Low</button></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="quality-button-wrapper"><button class="quality-button" id="mediumButton">Medium</button></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="quality-button-wrapper"><button class="quality-button" id="highButton">High</button></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="menuSettings-description2">Dev Options:</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="devButtonOff" id="devButton">Off</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="dropdown-menu" id="menu" hidden>
+    <table>
+        <tr>
+            <td><div class="title">Select a playable Character:</div></td>
+        </tr>
+            <td><div class="character-button-wrapper"><button class="image-button" id="marioButton"></button></div></td>
+            <td><div class="character-button-wrapper"><button class="image-button" id="luigiButton"></button></div></td>
+        </tr>
+
+
+        <tr>
+            <td><div class="title">Choose a Difficulty:</div></td>
+        </tr>
+        <tr>
+            <td><div class="difficulty-button-wrapper"><button class="difficulty-button" id="easyButton">Easy</button></div></td>
+            <td><div class="difficulty-button-wrapper"><button class="difficulty-button" id="normalButton">Normal</button></div></td>
+            <td><div class="difficulty-button-wrapper"><button class="difficulty-button" id="hardButton">Hard</button></div></td>
+            <td><div class="difficulty-godmode-button-wrapper"><button id="godmodeButton">Godmode</button></div></td>
+        </tr>
+
+
+        <tr>
+            <td><div class="title">Choose an Environment:</div></td>
+        </tr>
+        <tr>
+            <td><div class="environment-button-wrapper"><button class="image-button" id="grasslandButton">Grassland</button></div></td>
+            <td><div class="environment-button-wrapper"><button class="image-button" id="caveButton">Cave</button></div></td>
+            <td><div class="environment-button-wrapper"><button class="image-button" id="spaceButton">Space</button></div></td>
+        </tr>
+
+        <tr>
+            <td><button id="startButton">Start Game</button></td>
+        </tr>
+    </table>
+
+</div>
+
+
+<div id="menuPause-screen-wrapper" hidden></div>
+
+<div class="menuPause-wrapper" id="menuPause-wrapper" hidden>
+<div class="menuPause-background-wrapper"></div>
+    <table class="menuPause" id="menuPause">
+        <tr>
+            <td>
+                <div class="menuPause-title">Game Paused</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="menuPause-description">Change the audio options or choose to Quit or Resume</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="menuPause-description2">Toggle Music</div>
+            </td>
+            <td>
+                <div class="menuPause-description2">Toggle Sound</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="audioButton musicButtonOn" id="musicButtonPause"></button>
+            </td>
+            <td>
+                <button class="audioButton soundButtonOn" id="soundButtonPause"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="exitButtonPause">Exit</button>
+            </td>
+            <td>
+                <button id="continueButtonPause">Continue</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="menuPause-wrapper" id="menuGameOver-wrapper" hidden>
+<div class="menuPause-background-wrapper"></div>
+    <table class="menuPause" id="menuGameOver">
+        <tr>
+            <td>
+                <div class="menuPause-title">Game Over</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="menuPause-description">Change the audio options or choose to Quit or Restart</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="menuPause-description2">Toggle Music</div>
+            </td>
+            <td>
+                <div class="menuPause-description2">Toggle Sound</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="audioButton musicButtonOn" id="musicButtonGameOver"></button>
+            </td>
+            <td>
+                <button class="audioButton soundButtonOn" id="soundButtonGameOver"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="exitButtonGameOver">Home Page</button>
+            </td>
+            <td>
+                <button id="restartButtonGameOver">Restart</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<table id="gameScore" hidden>
+    <tr>
+        <td>
+            <div>Points:</div>
+        </td>
+        <td>
+            <div id="score"></div>
+        </td>
+        <td>
+            <div id="sum-points"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div>Lives:</div>
+        </td>
+        <td>
+            <div id="lives"></div>
+        </td>
+        <td>
+            <div id="sum-lives"></div>
+        </td>
+    </tr>
+</table>
+
+
+<div id="canvas"></div>
+
+
+<script type="module" src='./js/script.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rocket - Lowpoly
+* source:	https://sketchfab.com/3d-models/rocket-lowpoly-d8b91b9319384cfcb915da068c219148
+* author:	Kenniuuu (https://sketchfab.com/keniu)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rocket - Lowpoly" (https://sketchfab.com/3d-models/rocket-lowpoly-d8b91b9319384cfcb915da068c219148) by Kenniuuu (https://sketchfab.com/keniu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

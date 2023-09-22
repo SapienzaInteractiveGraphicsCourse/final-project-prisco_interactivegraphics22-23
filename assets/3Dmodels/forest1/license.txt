@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lowpoly Forest
+* source:	https://sketchfab.com/3d-models/lowpoly-forest-c1792b352d6d470f8217b497d072e4b7
+* author:	Ertugrul Oral (https://sketchfab.com/ertugrul.orl)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lowpoly Forest" (https://sketchfab.com/3d-models/lowpoly-forest-c1792b352d6d470f8217b497d072e4b7) by Ertugrul Oral (https://sketchfab.com/ertugrul.orl) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

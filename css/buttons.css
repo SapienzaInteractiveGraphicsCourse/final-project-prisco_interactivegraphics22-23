@@ -1,0 +1,1268 @@
+
+
+/* ----- GO BUTTON ----- */
+.pulsating-button {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 100%;
+    border: 5px solid white;
+
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+    margin: 50px auto;
+    padding: 10px;
+
+    box-shadow: 0 0 0 0 white;
+    background-color: blue;
+
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+
+    font-size: 10vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+
+.pulsating-button:hover {
+    border: 5px solid blue;
+	background-color: white;
+	color: blue;
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+    transform: scale(1.07);
+	transition-duration: 0.075s;
+
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+}
+
+.pulsating-button:active {
+    border: 5px solid white;
+	background-color: white;
+	color: white;
+	transition-duration: 0.075s;
+}
+
+@-webkit-keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 40px rgba(232, 76, 61, 0);
+    }
+}
+
+@-moz-keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 40px rgba(232, 76, 61, 0);
+    }
+}
+
+@-ms-keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 40px rgba(232, 76, 61, 0);
+    }
+}
+
+@keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 40px rgba(232, 76, 61, 0);
+    }
+}
+/* ----- ----- ----- */
+
+
+/* ----- MAIN MENU ----- */
+.dropdown-menu {
+    position: absolute;
+    font-size: 3vh;
+    font-weight: bold;
+
+    transform-origin: top center;
+}
+
+.dropdown-menu table tr {
+    opacity: 0;
+}
+
+.dropdown-menu table tr:nth-child(1) {
+    margin-top: 1vh;
+    animation: blur 0.45s 0.5s, opacity-in 0.3s 0.5s forwards;
+    transform-origin: top center;
+}
+
+.dropdown-menu table tr:nth-child(2) {
+    margin-top: 1vh;
+    animation: rotateMenu 0.5s 0.5s ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.dropdown-menu table tr:nth-child(3) {
+    margin-top: 3vh;
+    animation: blur 0.45s 1s, opacity-in 0.3s 1s forwards;
+    transform-origin: top center;
+}
+
+.dropdown-menu table tr:nth-child(4) {
+    margin-top: 1vh;
+    animation: rotateMenu 0.5s 1s ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.dropdown-menu table tr:nth-child(5) {
+    margin-top: 3vh;
+    animation: blur 0.45s 1.5s, opacity-in 0.3s 1.5s forwards;
+    transform-origin: top center;
+}
+
+.dropdown-menu table tr:nth-child(6) {
+    margin-top: 1vh;
+    animation: rotateMenu 0.5s 1.5s ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.dropdown-menu table tr:nth-child(7) {
+    margin-top: 3vh;
+    animation: rotateMenu 0.5s 2s ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes rotateMenu {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+    50% {
+        transform: rotateX(-20deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes blur {
+	from {
+		filter: blur(70px);
+		transform: translateY(40px);
+	}
+	to {
+		filter: blur(0px);
+		transform: translateY(0px);
+	}
+}
+
+@keyframes opacity-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+/* ----- ----- ----- */
+
+
+/* ----- MARIO BUTTON ----- */
+#marioButton {
+    background-image: url("../assets/images/mario.jpg");
+    background-size: cover;
+    width: 25vw;
+    height: 28vh;
+}
+/* ----- ----- ----- */
+
+
+/* ----- LUIGI BUTTON ----- */
+#luigiButton {
+    background-image: url("../assets/images/luigi.png");
+    background-size: cover;
+    width: 25vw;
+    height: 28vh;
+}
+/* ----- ----- ----- */
+
+
+/* ----- GRASSLAND BUTTON ----- */
+#grasslandButton {
+    background-image: url("../assets/images/grassland.avif");
+    background-size: cover;
+    width: 15vw;
+    height: 16vh;
+}
+/* ----- ----- ----- */
+
+
+/* ----- CAVE BUTTON ----- */
+#caveButton {
+    background-image: url("../assets/images/cave.jpg");
+    background-size: cover;
+    width: 15vw;
+    height: 16vh;
+}
+/* ----- ----- ----- */
+
+
+/* ----- SPACE BUTTON ----- */
+#spaceButton {
+    background-image: url("../assets/images/space.avif");
+    background-size: cover;
+    width: 15vw;
+    height: 16vh;
+}
+/* ----- ----- ----- */
+
+
+/* ----- BUTTON WRAPPERS ----- */
+.character-button-wrapper {
+    width: 25vw;
+    height: 28vh;
+    border-radius: 2vw;
+    background: lightgrey;
+}
+
+.difficulty-button-wrapper {
+    width: 10vw;
+    height: 10vh;
+    border-radius: 2vw;
+    background: lightgrey;
+}
+
+.difficulty-godmode-button-wrapper {
+    width: 15vw;
+    height: 10vh;
+    border-radius: 10vw;
+    background: lightgrey;
+}
+
+.environment-button-wrapper {
+    width: 15vw;
+    height: 16vh;
+    border-radius: 2vw;
+    background: lightgrey;
+}
+/* ----- ----- ----- */
+
+
+/* ----- IMAGE BUTTONS ----- */
+.image-button {
+
+    opacity: 0.5;
+
+    border: 0.6vh solid goldenrod;
+    border-radius: 2vw;
+
+    white-space: nowrap;
+    display: block;
+    padding: 1vh 0.5vw;
+
+    text-align: left;
+    display: inline-flex;
+    align-items: flex-start;
+
+    font-size: 3vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    color: white;
+
+    transition: all 300ms ease-in-out;
+}
+
+.image-button:hover {
+    opacity: 1;
+    border: 0.5vh solid gold;
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+    transform: scale(1.03);
+	transition-duration: 0.075s;
+
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+}
+
+.image-button:active {
+    opacity: 1;
+    border: 0.5vh solid yellow;
+	transition-duration: 0.075s;
+}
+/* ----- ----- ----- */
+
+
+/* ----- DIFFICULTY BUTTON ----- */
+.difficulty-button {
+    opacity: 0.5;
+
+    width: 10vw;
+    height: 10vh;
+
+    border: 0.6vh solid goldenrod;
+    border-radius: 2vw;
+
+    white-space: nowrap;
+    display: block;
+    padding: 1vh 0.5vw;
+
+    font-size: 4vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    color: white;
+
+    display: inline-block;
+
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: red;
+    
+    position: relative;
+    transition: transform ease-in 0.1s;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:before, &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 140%;
+        height: 100%;
+        left: -20%;
+        z-index: -1000;
+        transition: all ease-in-out 0.5s;
+        background-repeat: no-repeat;
+    }
+
+    &:before {
+        display: none;
+        top: -75%;
+        background-image:
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle,  transparent 20%, red 20%, transparent 30%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle,  transparent 10%, red 15%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%);
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+    }
+
+    &:after {
+        display: none;
+        bottom: -75%;
+        background-image:
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle,  transparent 10%, red 15%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%);
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+    }
+
+    &:hover {
+        opacity: 1;
+        border: 0.5vh solid gold;
+        background-color: #e80000;
+	    box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+        transform: scale(1.03);
+	    transition-duration: 0.075s;
+
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none;
+    }
+
+    &:active {
+        opacity: 1;
+        border: 0.5vh solid yellow;
+	    transition-duration: 0.075s;
+    }
+
+    &.animate {
+        &:before {
+            display: block;
+            animation: topBubbles ease-in-out 0.75s forwards;
+        }
+        &:after {
+            display: block;
+            animation: bottomBubbles ease-in-out 0.75s forwards;
+        }
+    }
+}
+
+
+@keyframes topBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;}
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+    }
+}
+
+@keyframes bottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;}
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+    }
+}
+/* ----- ----- ----- */
+
+
+/* ----- GODMODE BUTTON ----- */
+#godmodeButton {
+    opacity: 0.5;
+
+    width: 15vw;
+    height: 10vh;
+    border-radius: 10vw;
+    border: none;
+    outline: none;
+    font-size: 4vh;
+    font-weight: bold;
+    color: #fff;
+    background: red;
+    position: relative;
+    z-index: 0;
+}
+
+#godmodeButton:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -8px;
+    left:-8px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10vw;
+}
+
+#godmodeButton:hover {
+    opacity: 1;
+    transform: scale(1.05);
+	transition-duration: 0.075s;
+
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+}
+
+#godmodeButton:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    left: 0;
+    top: 0;
+    border-radius: 10vw;
+}
+
+#godmodeButton-selected {
+    opacity: 1;
+
+    width: 15vw;
+    height: 10vh;
+    border: none;
+    outline: none;
+    font-size: 4vh;
+    font-weight: bold;
+    color: #fff;
+    background: red;
+    position: relative;
+    z-index: 0;
+    border-radius: 10vw;
+}
+
+#godmodeButton-selected:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -8px;
+    left:-8px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10vw;
+}
+
+#godmodeButton-selected:hover {
+    opacity: 1;
+    
+    transform: scale(1.05);
+	transition-duration: 0.075s;
+
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+}
+
+#godmodeButton-selected:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    left: 0;
+    top: 0;
+    border-radius: 10vw;
+}
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/* ----- ----- ----- */
+
+
+/* ----- START BUTTON ----- */
+#startButton {
+    width: 30vw;
+    height: 15vh;
+    border-radius: 20px;
+    border: 1vh solid gold;
+
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+    
+    padding: 1vh;
+
+    box-shadow: 0 0 0 0 red;
+    background-color: red;
+
+    -webkit-animation: pulsing-start 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing-start 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing-start 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing-start 2s infinite cubic-bezier(0.66, 0, 0, 1);
+
+    font-size: 8vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    color: white;
+}
+
+#startButton:hover {
+    border: 0.5vh solid gold;
+    
+    background-color: #e80000;
+	
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+    transform: scale(1.07);
+	transition-duration: 0.075s;
+
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+}
+
+#startButton:active {
+    border: 0.5vh solid yellow;
+    transition-duration: 0.075s;
+}
+
+@-webkit-keyframes pulsing-start {
+    to {
+        box-shadow: 0 0 0 1vw rgba(232, 76, 61, 0);
+    }
+}
+
+@-moz-keyframes pulsing-start {
+    to {
+        box-shadow: 0 0 0 1vw rgba(232, 76, 61, 0);
+    }
+}
+
+@-ms-keyframes pulsing-start {
+    to {
+        box-shadow: 0 0 0 1vw rgba(232, 76, 61, 0);
+    }
+}
+
+@keyframes pulsing-start {
+    to {
+        box-shadow: 0 0 0 1vw rgba(232, 76, 61, 0);
+    }
+}
+/* ----- ----- ----- */
+
+
+/* ----- PUASE MENU WRAPPER ----- */
+#menuPause-screen-wrapper {
+    opacity: 0.4;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgrey;
+    z-index: 1;
+}
+
+.menuPause-wrapper {
+    opacity: 1;
+    position: absolute;
+    top: 15vh;
+    left: 25vw;
+    width: 50vw;
+    height: 70vh;
+    border-radius: 20px;
+    background-color: lightgray;
+    z-index: 5;
+    animation: opacity-in 0.5s forwards;
+}
+
+.menuPause-background-wrapper {
+    opacity: 0.3;
+    
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 20px;
+    background-image: url("../assets/images/background.jpg");
+}
+/* ----- ----- ----- */
+
+
+/* ----- PAUSE MENU ----- */
+.menuPause {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: solid 2px black;
+    
+    width: 50vw;
+    height: 70vh;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.menuPause tr {
+    height: 20%;
+}
+
+.menuPause-title {
+    font-size: 10vh;
+}
+
+.menuPause-description {
+    padding: 2vh 3vw;
+    font-size: 5vh;
+}
+
+.menuPause tr:nth-child(3) {
+    height: 15%;
+}
+
+.menuPause tr:nth-child(3) td, .menuPause tr:nth-child(4) td, .menuPause tr:nth-child(5) td, .menuPause tr:nth-child(6) td {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 25%
+}
+
+.menuPause-description2 {
+    margin-top: 5vh;
+    font-size: 3vh;
+}
+/* ----- ----- ----- */
+
+
+/* ----- SOUND BUTTON ----- */
+.soundButtonOn {
+    background-image: url("../assets/images/soundOn.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: lime;
+}
+
+.soundButtonOff {
+    background-image: url("../assets/images/soundOff.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: red;
+}
+/* ----- ----- ----- */
+
+
+/* ----- MUSIC BUTTON ----- */
+.musicButtonOn {
+    background-image: url("../assets/images/musicOn.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: lime;
+}
+
+.musicButtonOff {
+    background-image: url("../assets/images/musicOff.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: red;
+}
+/* ----- ----- ----- */
+
+
+/* ----- AUDIO BUTTONS ----- */
+.audioButton {
+    width: 10vw;
+    height: 12vh;
+    border-radius: 20px;
+    border: 1vh solid gold;
+
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+}
+
+.audioButton:hover {
+    border: 1vh solid gold;
+    filter: brightness(85%);
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+    transform: scale(1.07);
+	transition-duration: 0.075s;
+}
+
+.audioButton:active {
+    border: 1vh solid yellow;
+    transition-duration: 0.075s;
+}
+/* ----- ----- ----- */
+
+
+/* ----- EXIT BUTTON ----- */
+#exitButtonPause {
+    width: 10vw;
+    height: 12vh;
+    border-radius: 20px;
+    border: 1vh solid gold;
+    background-color: red;
+    margin: 1.5vh;
+
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+
+    font-size: 4vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    color: white;
+}
+
+#exitButtonPause:hover {
+    border: 1vh solid gold;
+    filter: brightness(85%);
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+    transform: scale(1.07);
+	transition-duration: 0.075s;
+}
+
+#exitButtonPause:active {
+    border: 1vh solid yellow;
+    transition-duration: 0.075s;
+}
+/* ----- ----- ----- */
+
+
+/* ----- CONTINUE BUTTON ----- */
+#continueButtonPause {
+    width: 10vw;
+    height: 12vh;
+    border-radius: 20px;
+    border: 1vh solid gold;
+    background-color: lime;
+    margin: 1.5vh;
+
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+
+    font-size: 4vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    color: white;
+}
+
+#continueButtonPause:hover {
+    border: 1vh solid gold;
+    filter: brightness(85%);
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+    transform: scale(1.07);
+	transition-duration: 0.075s;
+}
+
+#continueButtonPause:active {
+    border: 1vh solid yellow;
+    transition-duration: 0.075s;
+}
+/* ----- ----- ----- */
+
+
+/* ----- EXIT BUTTON GAME OVER ----- */
+#exitButtonGameOver {
+    width: 10vw;
+    height: 12vh;
+    border-radius: 20px;
+    border: 1vh solid gold;
+    background-color: red;
+    margin: 1.5vh;
+
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+
+    font-size: 3.2vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    color: white;
+}
+
+#exitButtonGameOver:hover {
+    border: 1vh solid gold;
+    filter: brightness(85%);
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+    transform: scale(1.07);
+	transition-duration: 0.075s;
+}
+
+#exitButtonGameOver:active {
+    border: 1vh solid yellow;
+    transition-duration: 0.075s;
+}
+/* ----- ----- ----- */
+
+
+/* ----- RESTART BUTTON GAME OVER ----- */
+#restartButtonGameOver {
+    width: 10vw;
+    height: 12vh;
+    border-radius: 20px;
+    border: 1vh solid gold;
+    background-color: lime;
+    margin: 1.5vh;
+
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+
+    font-size: 4vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    color: white;
+}
+
+#restartButtonGameOver:hover {
+    border: 1vh solid gold;
+    filter: brightness(85%);
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+    transform: scale(1.07);
+	transition-duration: 0.075s;
+}
+
+#restartButtonGameOver:active {
+    border: 1vh solid yellow;
+    transition-duration: 0.075s;
+}
+/* ----- ----- ----- */
+
+
+/* ----- SETTINGS BUTTON ----- */
+#settingsButton {
+    position: absolute;
+    top: 5vh;
+    right: 1vw;
+    width: 6vw;
+    height: 10vh;
+    border-radius: 20px;
+    border: 1vh solid gold;
+
+    text-align: center;
+    white-space: nowrap;
+
+    background-image: url("../assets/images/settings.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: orange;
+}
+
+#settingsButton:hover {
+    border: 1vh solid gold;
+    filter: brightness(120%);
+	transition-duration: 0.075s;
+}
+
+#settingsButton:active {
+    border: 1vh solid yellow;
+    transition-duration: 0.075s;
+}
+/* ----- ----- ----- */
+
+
+/* ----- BACK BUTTON ----- */
+#backButton {
+    position: relative;
+    top: 1vh;
+
+    width: 4vw;
+    height: 6vh;
+    border-radius: 20px;
+    border: 0.5vh solid gold;
+
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+
+    background-image: url("../assets/images/back.jpg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: lime;
+}
+
+#backButton:hover {
+    border: 0.5vh solid gold;
+    filter: brightness(120%);
+	box-shadow: 0 0 0 0.1vw rgb(0, 0, 0, 0.2);
+    transform: scale(1.07);
+	transition-duration: 0.075s;
+}
+
+#backButton:active {
+    border: 0.5vh solid yellow;
+    transition-duration: 0.075s;
+}
+/* ----- ----- ----- */
+
+
+/* ----- SETTINGS MENU WRAPPER ----- */
+.menuSettings-wrapperOn {
+    opacity: 1;
+    position: absolute;
+    top: 2.5vh;
+    left: 84vw;
+    width: 15vw;
+    height: 95vh;
+    border-radius: 20px;
+    background-color: coral;
+    z-index: 5;
+	transform: translateX(20vw);
+    animation: menu-swipe-in 0.5s forwards;
+}
+
+@keyframes menu-swipe-in {
+	0% {
+		transform: translateX(20vw);
+	}
+	100% {
+		transform: translateX(0vw);
+	}
+}
+
+.menuSettings-wrapperOff {
+    opacity: 1;
+    position: absolute;
+    top: 2.5vh;
+    left: 84vw;
+    width: 15vw;
+    height: 95vh;
+    border-radius: 20px;
+    background-color: coral;
+    z-index: 5;
+	transform: translateX(0vw);
+    animation: menu-swipe-out 1s forwards;
+}
+
+@keyframes menu-swipe-out {
+	0% {
+		transform: translateX(0vw);
+	}
+	100% {
+		transform: translateX(20vw);
+	}
+}
+
+.menuSettings-background-wrapper {
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-image: url("../assets/images/background.jpg");
+}
+/* ----- ----- ----- */
+
+
+/* ----- SETTINGS MENU ----- */
+.menuSettings {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: solid 2px black;
+    width: 15vw;
+    height: 95vh;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.menuSettings tr:nth-child(7), .menuSettings tr:nth-child(8), .menuSettings tr:nth-child(9) {
+    height: 8vh;
+}
+
+.menuSettings-title {
+    margin-top: 2vh;;
+    font-size: 4vh;
+}
+
+.menuSettings-description2 {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    font-size: 2.5vh;
+    padding: 0.3vh 1vw;
+    border-radius: 20px;
+    border: solid 0.2vh black;
+    background-color: lightgray;
+}
+/* ----- ----- ----- */
+
+
+/* ----- SETTINGS MENU AUDIO BUTTONS ----- */
+.audioButtonSettings {
+    width: 6vw;
+    height: 10vh;
+    margin-bottom: 1vh;
+    border-radius: 20px;
+    border: 1vh solid gold;
+
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+}
+
+.audioButtonSettings:hover {
+    border: 1vh solid gold;
+    filter: brightness(85%);
+	box-shadow: 0 0 0 0.3vw rgb(0, 0, 0, 0.2);
+    transform: scale(1.07);
+	transition-duration: 0.075s;
+}
+
+.audioButtonSettings:active {
+    border: 1vh solid yellow;
+    transition-duration: 0.075s;
+}
+/* ----- ----- ----- */
+
+
+/* ----- QUALITY BUTTON WRAPPER ----- */
+.quality-button-wrapper {
+    width: 7vw;
+    height: 7vh;
+    border-radius: 2vw;
+    background: lightgrey;
+}
+/* ----- ----- ----- */
+
+
+/* ----- QUALITY BUTTON ----- */
+.quality-button {
+    opacity: 0.5;
+
+    width: 7vw;
+    height: 7vh;
+
+    border: 0.6vh solid goldenrod;
+    border-radius: 2vw;
+
+    white-space: nowrap;
+    display: block;
+    padding: 1vh 0.5vw;
+
+    font-size: 3vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    color: white;
+
+    display: inline-block;
+    
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: red;
+    
+    position: relative;
+    
+    transition: transform ease-in 0.1s;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:before, &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 140%;
+        height: 100%;
+        left: -20%;
+        z-index: -1000;
+        transition: all ease-in-out 0.5s;
+        background-repeat: no-repeat;
+    }
+
+    &:before {
+        display: none;
+        top: -75%;
+        background-image:
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle,  transparent 20%, red 20%, transparent 30%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle,  transparent 10%, red 15%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%);
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+    }
+
+    &:after {
+        display: none;
+        bottom: -75%;
+        background-image:
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle,  transparent 10%, red 15%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%),
+        radial-gradient(circle, red 20%, transparent 20%);
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+    }
+
+    &:hover {
+        opacity: 1;
+        border: 0.5vh solid gold;
+        background-color: #e80000;
+	    box-shadow: 0 0 0 0.3vw rgb(0, 0, 0, 0.2);
+        transform: scale(1.03);
+	    transition-duration: 0.075s;
+
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none;
+    }
+
+    &:active {
+        opacity: 1;
+        border: 0.5vh solid yellow;
+	    transition-duration: 0.075s;
+    }
+
+    &.animate {
+        &:before {
+            display: block;
+            animation: topBubbles ease-in-out 0.75s forwards;
+        }
+        &:after {
+            display: block;
+            animation: bottomBubbles ease-in-out 0.75s forwards;
+        }
+    }
+}
+/* ----- ----- ----- */
+
+
+/* ----- DEV BUTTON ----- */
+.devButtonOn {
+    background-color: lime;
+}
+
+.devButtonOff {
+    background-color: red;
+}
+
+#devButton {
+    width: 6vw;
+    height: 10vh;
+    border-radius: 20px;
+    border: 1vh solid gold;
+
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+
+    font-size: 3vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    color: white;
+}
+
+#devButton:hover {
+    border: 1vh solid gold;
+    filter: brightness(85%);
+	box-shadow: 0 0 0 0.3vw rgb(0, 0, 0, 0.2);
+    transform: scale(1.07);
+	transition-duration: 0.075s;
+}
+
+#devButton:active {
+    border: 1vh solid yellow;
+    transition-duration: 0.075s;
+}
+/* ----- ----- ----- */
+
+
+/* -----  BUTTON SELECTED ----- */
+.selected {
+    opacity: 1;
+    border: 5px solid yellow;
+	transition-duration: 0.075s;
+}
+/* ----- ----- ----- */

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Brick Block (Super Mario Bros.)
+* source:	https://sketchfab.com/3d-models/brick-block-super-mario-bros-85d948fcbbf8476ebe0d79e1590ee032
+* author:	aidanp (https://sketchfab.com/bionic_leaf)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Brick Block (Super Mario Bros.)" (https://sketchfab.com/3d-models/brick-block-super-mario-bros-85d948fcbbf8476ebe0d79e1590ee032) by aidanp (https://sketchfab.com/bionic_leaf) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

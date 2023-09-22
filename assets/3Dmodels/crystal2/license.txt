@@ -1,0 +1,11 @@
+Model Information:
+* title:	Toon Style - Crystal
+* source:	https://sketchfab.com/3d-models/toon-style-crystal-1f24004310a14ff29710ebc58a349371
+* author:	Yutaka (https://sketchfab.com/yutaka.games)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Toon Style - Crystal" (https://sketchfab.com/3d-models/toon-style-crystal-1f24004310a14ff29710ebc58a349371) by Yutaka (https://sketchfab.com/yutaka.games) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

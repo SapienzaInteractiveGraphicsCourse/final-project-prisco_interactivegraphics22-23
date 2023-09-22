@@ -1,0 +1,11 @@
+Model Information:
+* title:	Warp Pipe
+* source:	https://sketchfab.com/3d-models/warp-pipe-e4db0ad645fc4a279e255660cc60e7e7
+* author:	Ludus101 (https://sketchfab.com/Ludus101)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Warp Pipe" (https://sketchfab.com/3d-models/warp-pipe-e4db0ad645fc4a279e255660cc60e7e7) by Ludus101 (https://sketchfab.com/Ludus101) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

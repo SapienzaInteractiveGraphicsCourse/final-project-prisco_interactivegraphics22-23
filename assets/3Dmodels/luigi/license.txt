@@ -1,0 +1,11 @@
+Model Information:
+* title:	Luigi (Mario Party 10)
+* source:	https://sketchfab.com/3d-models/luigi-mario-party-10-ea261541e8b2447ab4bf07ac5ddb7d6b
+* author:	Nintega Dario (https://sketchfab.com/nintegaduigi3)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Luigi (Mario Party 10)" (https://sketchfab.com/3d-models/luigi-mario-party-10-ea261541e8b2447ab4bf07ac5ddb7d6b) by Nintega Dario (https://sketchfab.com/nintegaduigi3) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
