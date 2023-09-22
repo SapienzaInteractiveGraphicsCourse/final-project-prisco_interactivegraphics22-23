@@ -1,7 +1,11 @@
-import * as THREE from '../libs/three.js-master/build/three.module.js';
-import TWEEN from '../libs/tween.js-main/dist/tween.esm.js';
-import {OrbitControls} from '../libs/three.js-master/examples/jsm/controls/OrbitControls.js';
-import {GLTFLoader} from '../libs/three.js-master/examples/jsm/loaders/GLTFLoader.js';
+// import * as THREE from '../libs/three.js-master/build/three.module.js';
+// import TWEEN from '../libs/tween.js-main/dist/tween.esm.js';
+// import {OrbitControls} from '../libs/three.js-master/examples/jsm/controls/OrbitControls.js';
+// import {GLTFLoader} from '../libs/three.js-master/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from '../libs/three.module.js';
+import TWEEN from '../libs/tween.esm.js';
+// import {OrbitControls} from '../libs/three.js-master/examples/jsm/controls/OrbitControls.js';
+import {GLTFLoader} from '../libs/GLTFLoader.js';
 
 import { initCharacters, initCharacterGame, initCharacterKeybordEventListeners, pauseCharacterGame } from './animations.js';
 import { degToRad, playMusic, playSound } from './utils.js';
