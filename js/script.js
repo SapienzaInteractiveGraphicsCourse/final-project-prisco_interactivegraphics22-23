@@ -1,7 +1,3 @@
-// import * as THREE from '../libs/three.js-master/build/three.module.js';
-// import TWEEN from '../libs/tween.js-main/dist/tween.esm.js';
-// import {OrbitControls} from '../libs/three.js-master/examples/jsm/controls/OrbitControls.js';
-// import {GLTFLoader} from '../libs/three.js-master/examples/jsm/loaders/GLTFLoader.js';
 import * as THREE from '../libs/three.module.js';
 import TWEEN from '../libs/tween.esm.js';
 // import {OrbitControls} from '../libs/three.js-master/examples/jsm/controls/OrbitControls.js';
@@ -260,6 +256,8 @@ function load3dModels() {
 
 	modelsLoaderManager.onProgress = (url, itemsLoaded, itemsTotal) => {
 		console.log("Loading models... ", (itemsLoaded / itemsTotal * 100).toFixed(2), '%');
+        document.getElementById("progressBar").style.width = (itemsLoaded / itemsTotal * 100) + "%" ;
+        document.getElementById("progressBar-text").innerHTML = (itemsLoaded / itemsTotal * 100).toFixed(1) + "%";
 	};
 	
     const gltfLoader = new GLTFLoader(modelsLoaderManager);
@@ -304,6 +302,8 @@ function loadTextures() {
 
 	texturesLoaderManager.onProgress = (url, itemsLoaded, itemsTotal) => {
 		console.log("Loading textures... ", (itemsLoaded / itemsTotal * 100).toFixed(2), '%');
+        document.getElementById("progressBar").style.width = (itemsLoaded / itemsTotal * 100) + "%" ;
+        document.getElementById("progressBar-text").innerHTML = (itemsLoaded / itemsTotal * 100).toFixed(1) + "%";
 	};
 	
 	const textureLoader = new THREE.TextureLoader(texturesLoaderManager);
@@ -340,6 +340,8 @@ function loadSounds() {
 
 	soundsLoaderManager.onProgress = (url, itemsLoaded, itemsTotal) => {
 		console.log("Loading sounds... ", (itemsLoaded / itemsTotal * 100).toFixed(2), '%');
+        document.getElementById("progressBar").style.width = (itemsLoaded / itemsTotal * 100) + "%" ;
+        document.getElementById("progressBar-text").innerHTML = (itemsLoaded / itemsTotal * 100).toFixed(1) + "%";
 	};
 	
 	const audioLoader = new THREE.AudioLoader(soundsLoaderManager);
@@ -373,7 +375,7 @@ function init() {
     
     // const orbit = new OrbitControls(camera, renderer.domElement);
 
-    camera.position.set(200, 200, 200);
+    camera.position.set(0, 0, 200);
 
     setTimeout(function() {
         var position = new THREE.Vector3(-3, 5, 7);

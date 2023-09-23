@@ -1,5 +1,3 @@
-// import * as THREE from '../../../libs/three.js-master/build/three.module.js';
-// import TWEEN from '../../../libs/tween.js-main/dist/tween.esm.js';
 import * as THREE from '../libs/three.module.js';
 import TWEEN from '../libs/tween.esm.js';
 

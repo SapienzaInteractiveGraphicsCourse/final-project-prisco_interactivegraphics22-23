@@ -169,6 +169,38 @@
 	animation-delay: -0.3s, 0s;
 }
 
+
+#progressBar-container {
+	height: 30px;
+	position: relative;
+	top: 180px;
+  	border-radius: 20px;
+  	transition: all 0.5s;
+  	will-change: transform;
+  	box-shadow: 0 0 5px black;
+}
+
+#progressBar {
+	position: absolute;
+  	height: 100%;
+  	width: 0%;
+  	content: "";
+  	background-image: linear-gradient(to right, green, lime);
+  	top: 0;
+  	bottom: 0;
+  	border-radius: inherit;
+	box-shadow: 0 0 5px black;
+}
+
+#progressBar-text {
+	margin: 5px;
+	text-align: center;
+	color: white;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+
 #loader-wrapper span {
 	position: absolute;
 	top: 85px;
