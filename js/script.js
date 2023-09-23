@@ -482,7 +482,7 @@ function initScene() {
 function startGame() {
 
     let variables = Object.keys(window);
-    console.log(variables);
+    // console.log(variables);
 
     rendererSize.x = 1.0;
     rendererSize.y = 1.0;

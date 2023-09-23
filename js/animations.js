@@ -72,7 +72,6 @@ export function initCharacters(assets, scene, audio, options, musicAudioObject, 
     characterCurrentAnimationTweens = [];
     characterMovingAnimationTweens = [];
     activeCollisionBoxes = [];
-    
 
     /* ----- LIGHTS ----- */
     const ambientLight = new THREE.AmbientLight(0xffffff);
@@ -80,7 +79,6 @@ export function initCharacters(assets, scene, audio, options, musicAudioObject, 
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(-30, 50, 70);
     directionalLight.castShadow = true;
-
 
     const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 5, "#ff0000");
     const directionalLightShadowHelper = new THREE.CameraHelper(directionalLight.shadow.camera);
@@ -94,11 +92,9 @@ export function initCharacters(assets, scene, audio, options, musicAudioObject, 
     scene.add(directionalLight);
     /* ----- ----- ----- */
 
-    console.log("SCENE", scene);
-
-
     setMarioBones();
     setLuigiBones();
+
 
     characterReset(mario);
 
@@ -137,12 +133,8 @@ export function initCharacterGame(scene, camera, tex, playableCharacter) {
 
 
     scene.add(character.mesh);
-    // setMarioBones();
 
     character.mesh.rotation.y = degToRad(180);
-
-    // sound1.stop();
-    // sound2.stop();
 
     textures = tex;
     cumulativePosition = 0;
@@ -275,13 +267,9 @@ export function initCharacterGame(scene, camera, tex, playableCharacter) {
 	// scene.add(pointLight5);
     /* ----- ----- ----- */
 
-    console.log("SCENE", scene);
-
-
-
     initTile(scene, 3);
     
-    console.log("character:", character)
+    // console.log("character:", character)
 
     characterReset(character);
 
@@ -872,9 +860,8 @@ function characterIdleAnimation(character) {
 
 function moveCharacterForward(scene, camera, directionalLight, directionalLightTarget) {
     /* ----- BODY MOVEMENT ----- */
-    // var bodyMaxPosition = settings.endPosition;
     var animationTime = (-settings.endPosition / settings.speed)*1000;
-    console.log("ANIMATION TIME:",animationTime)
+
     var bodyPositionStart = {x:0, y:0, z:character.mesh.position.z};
     var bodyTweenStart = new TWEEN.Tween(bodyPositionStart)
     .to({x:0, y:0, z:settings.endPosition}, animationTime)
@@ -902,9 +889,6 @@ function moveCharacterForward(scene, camera, directionalLight, directionalLightT
         document.getElementById("score").innerHTML = scoreString.slice(0,-2) + "." + scoreString.slice(-2);
         document.getElementById("lives").innerHTML = settings.lives;
 
-        
-        // console.log("character mesh:",character.mesh)
-        // console.log("character collision box:",character.mesh.children[1])
 
         var collision = [];
         vertices.forEach(function(coordinates) {
@@ -917,17 +901,14 @@ function moveCharacterForward(scene, camera, directionalLight, directionalLightT
         });
 
         character.mesh.children[1].collision = collision;
-        // console.log("COLLISION BOX", character.mesh.children[1]);
-        // console.log("adding collision: ", collision);
 
 
         checkCollisions(scene);
 
         removeTiles(scene);
-        // console.log(camera.position)
 
         
-        if(character.mesh.position.k<-99999) {
+        if(character.mesh.position.k<settings.endPosition) {
             gameOver();
         }
 
@@ -1021,7 +1002,6 @@ function characterReset(character) {
     /* ----- HEAD ----- */
     character.bones.head.rotation.set(degToRad(0), degToRad(0), degToRad(0));
     character.bones.head_aimcont.rotation.set(degToRad(0), degToRad(0), degToRad(0));
-
     /* ----- ----- ----- */
 
     /* ----- CAP ----- */
@@ -1089,7 +1069,6 @@ function characterRunAnimation() {
 
     characterReset(character);
 
-    console.log("HEAD:", character.bones.head_aimcont.rotation)
 
     sound1.stop();
     if(settings.environment == "grassland") {
@@ -1920,7 +1899,7 @@ function moveCharacterTo(direction) {
 
     var finalPosition = character.currentPosition + character.horizontalMovement*direction;
 
-    // legal movement
+    // LEGAL MOVEMENT
     if(-character.horizontalMovement <= finalPosition && finalPosition <= character.horizontalMovement) {
 
         character.currentPosition = finalPosition;
@@ -1940,7 +1919,7 @@ function moveCharacterTo(direction) {
 
     }
 
-    // illegal movement
+    // ILLEGAL MOVEMENT
     else {
 
         /* ----- BODY MOVEMENT ----- */
@@ -1973,18 +1952,10 @@ function moveCharacterTo(direction) {
         if(character.name == "luigi") {
             playSound(sounds.luigi.invalid_movement.sound, 1, 0.8, false, settings, sound2);
         }
-        // setTimeout(function() {
-        //     if(!(character.isSliding || character.isJumping)) {
-        //         sound.stop()
-        //         playSound(sounds.character.run.sound, 1, 0.8, true, settings, sound);
-        //     }
-        // }, 300);
 
         characterCurrentAnimationTweens.push(bodyTweenEnd);
 
     }
-
-    // characterCurrentAnimationTweens.push(bodyTweenStart, bodyTweenEnd);
 
 }
 
@@ -1994,7 +1965,6 @@ function characterDamageAnimation() {
 
     settings.invincible = true;
 
-    
     var num = 5;
     var animationTime = character.damageAnimationTime;
 
@@ -2072,7 +2042,6 @@ function characterStarAnimation() {
                 if(settings.environment == "space") {
                     playMusic(sounds.music.space.sound, 0.5, settings, music);
                 }
-                // playMusic(sounds.music.home.sound, 0.5, settings, music);
 
                 console.log("STAR FINISHED")
     
@@ -2096,7 +2065,6 @@ function characterStarAnimation() {
             if(settings.environment == "space") {
                 playMusic(sounds.music.space.sound, 0.5, settings, music);
             }
-            // playMusic(sounds.music.home.sound, 0.5, settings, music);
 
             console.log("NOT IN GAME - STAR FINISHED")
 
@@ -2160,8 +2128,7 @@ export function pauseCharacterGame() {
         settings.gamePaused = true;
         document.getElementById("menuPause-screen-wrapper").hidden = false;
         document.getElementById("menuPause-wrapper").hidden = false;
-        // console.log(characterCurrentAnimationTweens)
-        // console.log(characterMovingAnimationTweens)
+        
         pauseAllTweens(characterCurrentAnimationTweens);
         pauseAllTweens(characterMovingAnimationTweens);
 
@@ -2179,7 +2146,6 @@ export function pauseCharacterGame() {
             if(settings.environment == "space") {
                 playMusic(sounds.music.space.sound, 0.1, settings, music);
             }
-            // playMusic(sounds.music.home.sound, 0.1, settings, music);
         }
         if(!settings.playMusic) {
             music.pause();
@@ -2205,6 +2171,7 @@ export function pauseCharacterGame() {
         initCharacterKeybordEventListeners();
         document.getElementById("menuPause-screen-wrapper").hidden = true;
         document.getElementById("menuPause-wrapper").hidden = true;
+
         resumeAllTweens(characterCurrentAnimationTweens);
         resumeAllTweens(characterMovingAnimationTweens);
 
@@ -2222,12 +2189,9 @@ export function pauseCharacterGame() {
             if(settings.environment == "space") {
                 playMusic(sounds.music.space.sound, 0.5, settings, music);
             }
-            // playMusic(sounds.music.home.sound, 0.5, settings, music);
         }
-        // playMusic(sounds.music.home.sound, 0.5, settings, music);
         if(settings.playSound) {
             sound1.play();
-            // sound2.play();
 
             if(!(character.isSliding || character.isJumping)) {
                 sound1.stop();
@@ -2302,8 +2266,7 @@ function gameOver() {
 
 function initTile(scene, num) {
 
-    // var tile = new THREE.Group();
-    console.log("ACTIVE COLLISION BOXES:", activeCollisionBoxes)
+    // console.log("ACTIVE COLLISION BOXES:", activeCollisionBoxes)
 
     var geometry = new THREE.BoxGeometry(1, 1, 1);
 
@@ -2329,8 +2292,6 @@ function initTile(scene, num) {
         var materialSide = new THREE.MeshStandardMaterial({map: textureSide});
     }
 
-
-    // var cumulativePosition = 0;
 
     for(var k=0; k<num; k++) {
 
@@ -2368,8 +2329,6 @@ function initTile(scene, num) {
         }
 
 
-
-
         for(var j=0; j<=jMax; j++) {
             for(var i=-iMax; i<=iMax; i++) {
 
@@ -2377,10 +2336,6 @@ function initTile(scene, num) {
                 if(i<-iMin||i>iMin) {
 
                     var mesh = new THREE.Mesh(geometry, materialSide);
-
-                    // var meshWidth = 5;
-                    // var meshHeight = 1;
-                    // var meshDepth = 5;
 
                     mesh.scale.set(meshWidth, meshHeight, meshDepth);
                     mesh.position.y = -meshHeight/2;
@@ -2390,7 +2345,7 @@ function initTile(scene, num) {
                     tile.add(mesh);
 
 
-                    /* usefull code to visualize the tiles' borders */
+                    /* useful code to visualize the tiles' borders */
                     var geo = new THREE.EdgesGeometry(geometry);
                     var mat = new THREE.LineBasicMaterial({color: 0x000000, linewidth: 1});
                     var wireframe = new THREE.LineSegments(geo, mat);
@@ -2406,9 +2361,6 @@ function initTile(scene, num) {
                 // ROAD
                 else {
                     var mesh = new THREE.Mesh(geometry, materialRoad);
-                    // var meshWidth = 5;
-                    // var meshHeight = 1;
-                    // var meshDepth = 5;
 
                     mesh.scale.set(meshWidth, meshHeight, meshDepth);
                     mesh.position.y = -meshHeight/2;
@@ -2418,7 +2370,7 @@ function initTile(scene, num) {
                     tile.add(mesh);
 
 
-                    /* usefull code to visualize the tiles' borders */
+                    /* useful code to visualize the tiles' borders */
                     var geo = new THREE.EdgesGeometry(geometry);
                     var mat = new THREE.LineBasicMaterial({color: 0x000000, linewidth: 1});
                     var wireframe = new THREE.LineSegments(geo, mat);
@@ -2436,15 +2388,9 @@ function initTile(scene, num) {
             }
         }
 
-        // console.log(j)
 
         cumulativePosition = cumulativePosition + j;
 
-        // don't spawn objects on the first tile
-        // if(!(num == 3 && k ==0 )) {
-        //     initObjects(tile);
-
-        // }
 
         // used to not spawn hazards on the first tile
         var flag = (num == 3 && k == 0);
@@ -2453,29 +2399,7 @@ function initTile(scene, num) {
         scene.add(tile);
         tiles.push(tile);
 
-        // console.log(tile)
-        // console.log(tile.children.at(-1).position.z)
-        // console.log(tiles)
-        // console.log(tiles.at(-1).children.at(-1).position.z)
-        // console.log(tiles.at(0).children.at(-1).position.z)
-
-
-
-
-        // tile.traverse(function(o) {
-        //     console.log(o)
-        // })
-        // tile.forEach( (mesh) => {
-        //     console.log(mesh)
-        // })
-        // console.log(tile)
-        // console.log(tile.children[10].position.z)
-
     }
-
-    // window.setInterval(function() {
-    //     console.log("CIAOO")
-    // }, 5000)
 
 }
 
@@ -2504,12 +2428,10 @@ function initObjects(tile, flag) {
 
     var rows = mat.length;
     var cols = mat[0].length;
-    // console.log("rows=", rows);
-    // console.log("cols=", cols);
+    
 
     for(var i=rows-1; i>=0; i--) {
         for(var j=cols-1; j>=0; j--) {
-            // console.log("i=",i,"j=",j)
 
             /* ----- MAIN ROAD ----- */
 
@@ -2619,7 +2541,6 @@ function initObjects(tile, flag) {
                         var object = models.coin.gltf.clone();
                         var collisionBox = initCollisionBox();
                         object.scale.set(10, 10, 10);
-                        // collisionBox.scale.set(1, 3, 3);
                         collisionBox.scale.set(1.5, 3, 3.5);
                         collisionBox.rotation.y = degToRad(90);
     
@@ -2642,7 +2563,6 @@ function initObjects(tile, flag) {
                         var object = models.coin.gltf.clone();
                         var collisionBox = initCollisionBox();
                         object.scale.set(10, 10, 10);
-                        // collisionBox.scale.set(1, 3, 3);
                         collisionBox.scale.set(1.5, 3, 3.5);
                         collisionBox.rotation.y = degToRad(90);
     
@@ -2665,7 +2585,6 @@ function initObjects(tile, flag) {
                         var object = models.coin.gltf.clone();
                         var collisionBox = initCollisionBox();
                         object.scale.set(10, 10, 10);
-                        // collisionBox.scale.set(1, 3, 3);
                         collisionBox.scale.set(1.5, 3, 3.5);
                         collisionBox.rotation.y = degToRad(90);
     
@@ -2686,9 +2605,7 @@ function initObjects(tile, flag) {
                     var object = models.star.gltf.clone();
                     var collisionBox = initCollisionBox();
                     object.scale.set(0.5, 0.5, 0.5);
-                    // collisionBox.scale.set(2.5, 2.5, 1);
                     collisionBox.scale.set(3, 3, 1.5);
-
     
                     star.add(object);
                     star.add(collisionBox);
@@ -2706,7 +2623,6 @@ function initObjects(tile, flag) {
                     var object = models.star.gltf.clone();
                     var collisionBox = initCollisionBox();
                     object.scale.set(0.5, 0.5, 0.5);
-                    // collisionBox.scale.set(2.5, 2.5, 1);
                     collisionBox.scale.set(3, 3, 1.5);
 
                     star.add(object);
@@ -2726,7 +2642,6 @@ function initObjects(tile, flag) {
                     var object = models.mushroom.gltf.clone();
                     var collisionBox = initCollisionBox();
                     object.scale.set(0.5, 0.5, 0.5);
-                    // collisionBox.scale.set(1.8, 1.8, 1.8);
                     collisionBox.scale.set(2.3, 2.3, 2.3);
                     collisionBox.position.y = 0.5;
     
@@ -2924,9 +2839,7 @@ function initObjects(tile, flag) {
         }
     }
 
-    // console.log(tile)
-    console.log("CUMULATIVE POSITION:",cumulativePosition)
-
+    // console.log("CUMULATIVE POSITION:",cumulativePosition)
 
 }
 
@@ -2948,7 +2861,6 @@ function initMatrix() {
         }
     }
 
-    // ONLY CHANGE THE NUMBER OF COLUMNS AND NOT ROWS, IF NEEDED
     for(var i=0; i<iMax; i++) {
         for(var j=0; j<jMax; j++) {
 
@@ -2957,22 +2869,25 @@ function initMatrix() {
                 if(i==0) {
                     var up = Math.random();
                     var starProbability = 0.25;
+
                     // spawn object up
                     if(up>=0.5) {
-                        // mat[i][j-1] = "roller1";
                         mat[i][j] = "roller1";
-                        // mat[i][j+1] = "roller1";
+
                         // spawn star
                         if(Math.random()<starProbability && !settings.star) {
+
                             // left lane
                             if(Math.random()<0.333) {
                                 mat[i+1][j-1] = "starDown";
                             }
+
                             // center lane
                             else {
                                 if(Math.random()>=0.333 && Math.random()<0.666) {
                                     mat[i+1][j] = "starDown";
                                 }
+
                                 // right lane
                                 else {
                                     mat[i+1][j+1] = "starDown";
@@ -2984,17 +2899,21 @@ function initMatrix() {
                         mat[i][j-1] = "spike";
                         mat[i][j] = "spike";
                         mat[i][j+1] = "spike";
+
                         // spawn star
                         if(Math.random()<starProbability && !settings.star) {
+
                             // left lane
                             if(Math.random()<0.333) {
                                 mat[i+1][j-1] = "starUp";
                             }
+
                             // center lane
                             else {
                                 if(Math.random()>=0.333 && Math.random()<0.666) {
                                     mat[i+1][j] = "starUp";
                                 }
+
                                 // right lane
                                 else {
                                     mat[i+1][j+1] = "starUp";
@@ -3005,17 +2924,21 @@ function initMatrix() {
                 }
                 if(i==5) {
                     var mushroomProbability = 0.25;
+
                     // spawn mushroom
                     if(Math.random()<mushroomProbability) {
+
                         // left lane
                         if(Math.random()<0.333) {
                             mat[i][j-1] = "mushroom";
                         }
+
                         // center lane
                         else {
                             if(Math.random()>=0.333 && Math.random()<0.666) {
                                 mat[i][j] = "mushroom";
                             }
+
                             // right lane
                             else {
                                 mat[i][j+1] = "mushroom";
@@ -3034,12 +2957,15 @@ function initMatrix() {
                         switch(position) {
                             case 1:
                                 mat[i][j-1] = "roller2";
+
                                 // spawn coins
                                 if(Math.random()<coinProbability) {
+
                                     // center lane
                                     if(Math.random()<0.5) {
                                         mat[i+1][j] = "coin";
                                     }
+
                                     // right lane
                                     else {
                                         mat[i+1][j+1] = "coin";
@@ -3048,12 +2974,15 @@ function initMatrix() {
                                 break;
                             case 2:
                                 mat[i][j] = "roller2";
+
                                 // spawn coins
                                 if(Math.random()<coinProbability) {
+
                                     // left lane
                                     if(Math.random()<0.5) {
                                         mat[i+1][j-1] = "coin";
                                     }
+
                                     // right lane
                                     else {
                                         mat[i+1][j+1] = "coin";
@@ -3062,12 +2991,15 @@ function initMatrix() {
                                 break;
                             case 3:
                                 mat[i][j+1] = "roller2";
+
                                 // spawn coins
                                 if(Math.random()<coinProbability) {
+
                                     // left lane
                                     if(Math.random()<0.5) {
                                         mat[i+1][j-1] = "coin";
                                     }
+
                                     // center lane
                                     else {
                                         mat[i+1][j] = "coin";
@@ -3076,18 +3008,21 @@ function initMatrix() {
                                 break;
                             case 4:
                                 mat[i][j-1] = "roller3";
-                                // mat[i][j] = "roller3";
+
                                 // spawn coins
                                 if(Math.random()<coinProbability) {
+
                                     // left lane
                                     if(Math.random()<0.333) {
                                         mat[i+2][j-1] = "coinDown";
                                     }
+
                                     // center lane
                                     else {
                                         if(Math.random()>=0.333 && Math.random()<0.666) {
                                             mat[i+2][j] = "coinDown";
                                         }
+
                                         // right lane
                                         else {
                                             mat[i+2][j+1] = "coin";
@@ -3097,18 +3032,21 @@ function initMatrix() {
                                 break;
                             case 5:
                                 mat[i][j] = "roller3";
-                                // mat[i][j+1] = "roller3";
+
                                 // spawn coins
                                 if(Math.random()<coinProbability) {
+
                                     // left lane
                                     if(Math.random()<0.333) {
                                         mat[i+2][j-1] = "coin";
                                     }
+
                                     // center lane
                                     else {
                                         if(Math.random()>=0.333 && Math.random()<0.666) {
                                             mat[i+2][j] = "coinDown";
                                         }
+
                                         // right lane
                                         else {
                                             mat[i+2][j+1] = "coinDown";
@@ -3120,6 +3058,7 @@ function initMatrix() {
                                 console.log("Invalid roller position");
                         }
                     }
+
                     // spikes
                     else {
                         var position = randomIntFromInterval(1, 3);
@@ -3127,17 +3066,21 @@ function initMatrix() {
                             case 1:
                                 mat[i][j-1] = "spike";
                                 mat[i][j] = "spike";
+
                                 // spawn coins
                                 if(Math.random()<coinProbability) {
+                                
                                     // left lane
                                     if(Math.random()<0.333) {
                                         mat[i+1][j-1] = "coinUp";
                                     }
+                                
                                     // center lane
                                     else {
                                         if(Math.random()>=0.333 && Math.random()<0.666) {
                                             mat[i+1][j] = "coinUp";
                                         }
+                                
                                         // right lane
                                         else {
                                             mat[i+1][j+1] = "coin";
@@ -3148,17 +3091,20 @@ function initMatrix() {
                             case 2:
                                 mat[i][j] = "spike";
                                 mat[i][j+1] = "spike";
+                                
                                 // spawn coins
                                 if(Math.random()<coinProbability) {
                                     // left lane
                                     if(Math.random()<0.333) {
                                         mat[i+1][j-1] = "coin";
                                     }
+                                
                                     // center lane
                                     else {
                                         if(Math.random()>=0.333 && Math.random()<0.666) {
                                             mat[i+1][j] = "coinUp";
                                         }
+                                
                                         // right lane
                                         else {
                                             mat[i+1][j+1] = "coinUp";
@@ -3169,17 +3115,21 @@ function initMatrix() {
                             case 3:
                                 mat[i][j-1] = "spike";
                                 mat[i][j+1] = "spike";
+                                
                                 // spawn coins
                                 if(Math.random()<coinProbability) {
+                                
                                     // left lane
                                     if(Math.random()<0.333) {
                                         mat[i+1][j-1] = "coinUp";
                                     }
+                                
                                     // center lane
                                     else {
                                         if(Math.random()>=0.333 && Math.random()<0.666) {
                                             mat[i+1][j] = "coin";
                                         }
+                                
                                         // right lane
                                         else {
                                             mat[i+1][j+1] = "coinUp";
@@ -3193,6 +3143,7 @@ function initMatrix() {
                     }
                 }
             }
+
             // SIDES
             else {
                 if(i==9 && j==0) {
@@ -3214,6 +3165,7 @@ function initMatrix() {
                             case 3:
                                 for(var x=1; x<iMax; x=x+3) {
                                     for(var y=Math.floor(jMax/2)-6; y<Math.floor(jMax/2); y=y+3) {
+                                        
                                         // spawn object
                                         if(Math.random()<=spawnProbability) {
                                             mat[x][y]="random";
@@ -3225,6 +3177,7 @@ function initMatrix() {
                                 }
                                 for(var x=1; x<iMax; x=x+3) {
                                     for(var y=Math.floor(jMax/2)+3; y<Math.floor(jMax/2)+7; y=y+3) {
+                                        
                                         // spawn object
                                         if(Math.random()<=spawnProbability) {
                                             mat[x][y]="random";
@@ -3239,7 +3192,6 @@ function initMatrix() {
                                 console.log("Invalid object position");
                         }
 
-
                     }
 
                     // CAVE
@@ -3251,6 +3203,7 @@ function initMatrix() {
                             spawnProbability = 0.3;
                         }
                         for(var x=1; x<iMax; x=x+3) {
+                            
                             // spawn object
                             if(Math.random()<=spawnProbability) {
                                 mat[x][Math.floor(jMax/2)-3]="randomCrystal";
@@ -3260,6 +3213,7 @@ function initMatrix() {
                             }
                         }
                         for(var x=1; x<iMax; x=x+3) {
+                            
                             // spawn object
                             if(Math.random()<=spawnProbability) {
                                 mat[x][Math.floor(jMax/2)+3]="randomCrystal";
@@ -3279,6 +3233,7 @@ function initMatrix() {
                         }
                         for(var x=1; x<iMax; x=x+3) {
                             for(var y=Math.floor(jMax/2)-6; y<Math.floor(jMax/2); y=y+3) {
+                                
                                 // spawn object
                                 if(Math.random()<=spawnProbability) {
                                     mat[x][y]="randomSpaceObject";
@@ -3290,6 +3245,7 @@ function initMatrix() {
                         }
                         for(var x=1; x<iMax; x=x+3) {
                             for(var y=Math.floor(jMax/2)+3; y<Math.floor(jMax/2)+7; y=y+3) {
+                                
                                 // spawn object
                                 if(Math.random()<=spawnProbability) {
                                     mat[x][y]="randomSpaceObject";
@@ -3316,14 +3272,13 @@ function removeTiles(scene) {
 
     // console.log("TILES", tiles)
     tiles.forEach(function(tile) {
-        // console.log(tile.children.at(-1).position.z)
-        // console.log(character.mesh.position.z)
+        
         if(tile.children.at(-1).position.z > character.mesh.position.z + 15 && character.mesh.position.z <= -90) {
             console.log("deleting tile ...")
-            console.log(characterMovingAnimationTweens);
+            // console.log(characterMovingAnimationTweens);
             scene.remove(tile);
             tiles.shift(tile);
-            console.log("ACTIVE COLLISION BOXES BEFORE:", activeCollisionBoxes)
+            // console.log("ACTIVE COLLISION BOXES BEFORE:", activeCollisionBoxes)
             removeInactiveCollisionBoxes();
             initTile(scene, 1);
         }
@@ -3340,16 +3295,13 @@ function removeInactiveTween(tween) {
 }
 
 function removeInactiveCollisionBoxes() {
-    // console.log("ACTIVE COLLISION BOXES BEFORE", activeCollisionBoxes)
 
     activeCollisionBoxes.forEach(function(collisionBox) {
         if(collisionBox.collision.reduce((prev, current) => (prev.z < current.z) ? prev : current).z > character.mesh.position.z + 5) {
             activeCollisionBoxes.splice(activeCollisionBoxes.indexOf(collisionBox), 1);
-            console.log("removing collision box: ", collisionBox.parent)
+            // console.log("removing collision box: ", collisionBox.parent)
         }
     });
-
-    // console.log("ACTIVE COLLISION BOXES AFTER", activeCollisionBoxes)
 
 }
 
@@ -3384,21 +3336,9 @@ function checkCollisions(scene) {
                 // collision over the y axys
                 if(characterMaxY > objectMinY && characterMinY < objectMaxY) {
             
-                    console.log("HIT");
-                    console.log("parent name:", collisionBox.parent.name)
+                    console.log("HIT - parent name:", collisionBox.parent.name)
 
-                    console.log("collisioned with:", collisionBox.collision)
-
-                    // console.log("collision box:", collisionBox)
-
-                    // activeCollisionBoxes.forEach(function(collisionBox) {
-                    //     console.log("COLLISION BOX BEFORE", collisionBox);
-                    // })
-                    // console.log("LENGTH BEFORE:", activeCollisionBoxes.length)
-                    // console.log("LENGTH AFTER:", activeCollisionBoxes.length)
-                    // activeCollisionBoxes.forEach(function(collisionBox) {
-                    //     console.log("COLLISION BOX AFTER", collisionBox);
-                    // })
+                    // console.log("collisioned with:", collisionBox.collision)
 
 
                     activeCollisionBoxes.splice(activeCollisionBoxes.indexOf(collisionBox), 1);
@@ -3407,6 +3347,7 @@ function checkCollisions(scene) {
                     collisionBox.parent.hit = true;
 
                     switch(collisionBox.parent.name) {
+
                         case "spike":
                             if(!settings.invincible && settings.difficulty != "godmode") {
                                 settings.lives--;
@@ -3509,35 +3450,10 @@ function checkCollisions(scene) {
 
                     }
 
-
-
-                    // Code for removing the object once collided (NOT WORKING, WILL BE REMOVED)
-                    // console.log("object uuid:", collisionBox.parent.uuid)
-                    // console.log("scene:", scene)
-                    // console.log("tile:",collisionBox.parent.parent)
-                    // console.log("children:",collisionBox.parent.parent.children)
-                    // console.log("children length:",collisionBox.parent.parent.children.length)
-                    // for(var i=0; i<scene.children.length; i++) {
-                    //     if(scene.children[i].uuid == collisionBox.parent.parent.uuid) {
-
-                    //         for(var j=0; j<collisionBox.parent.parent.children.length; j++) {
-                    //             if(collisionBox.parent.parent.children[j].uuid == collisionBox.parent.uuid) {
-                    //                 scene.remove(scene.children[i].children[j]);
-                    //                 console.log("removed:", scene.children[i].children[j].uuid)
-                    //             }
-                    //         }
-                    //     }   
-                    // }
-                    
-
                 }
             }
         }
 
-        // if(collisionBox.collision.reduce((prev, current) => (prev.z < current.z) ? prev : current).z > character.mesh.position.z + 10) {
-        //     activeCollisionBoxes.splice(activeCollisionBoxes.indexOf(collisionBox), 1);
-        //     console.log("removing collision box: ", collisionBox)
-        // }
     });
 
 }
@@ -3558,13 +3474,10 @@ function initCollisionBox() {
 
 function initCollisionVertices(collisionBox) {
 
-    // console.log("collsion box collision:",collisionBox.collision)
     if(typeof(collisionBox.collision) != "undefined") {
-        // console.log("ACTIVE BEFORE",activeCollisionBoxes)
-        // console.log("updating collision")
+        
         activeCollisionBoxes.splice(activeCollisionBoxes.indexOf(collisionBox), 1);
-        // console.log("removing collision box: ", collisionBox.collision)
-        // console.log("ACTIVE AFTER",activeCollisionBoxes)
+        
     }
 
     var collision = [];
@@ -3576,7 +3489,6 @@ function initCollisionVertices(collisionBox) {
     });
     collisionBox.collision = collision;
     activeCollisionBoxes.push(collisionBox);
-    // console.log("adding collision box: ", collisionBox.collision)
 }
 
 
@@ -3591,7 +3503,6 @@ function coinAnimation(coin) {
         if(typeof(coin.hit) == "undefined") {
             initCollisionVertices(coin.children[1]);
         }
-        // initCollisionVertices(coin.children[1]);
     })
     .start();
     coinTweenStart.repeat(15);
@@ -3612,7 +3523,6 @@ function mushroomAnimation(mushroom) {
         if(typeof(mushroom.hit) == "undefined") {
             initCollisionVertices(mushroom.children[1]);
         }
-        // initCollisionVertices(mushroom.children[1]);
     })
     .start();
     mushroomTweenStart.repeat(30);
@@ -3634,7 +3544,6 @@ function starAnimation(star) {
         if(typeof(star.hit) == "undefined") {
             initCollisionVertices(star.children[1]);
         }
-        // initCollisionVertices(star.children[1]);
     })
     .start();
     starTweenStart.repeat(30);
@@ -3657,7 +3566,6 @@ function spikeAnimation(spike) {
         if(typeof(spike.hit) == "undefined") {
             initCollisionVertices(spike.children[1]);
         }
-        // initCollisionVertices(spike.children[1]);
     })
     .start();
     spikeTweenStart.repeat(30);
@@ -3699,7 +3607,6 @@ function rollerHorizontalAnimation(roller) {
         if(typeof(roller.hit) == "undefined") {
             initCollisionVertices(roller.children[1]);
         }
-        // initCollisionVertices(roller.children[1]);
     })
     .start();
     rollerTweenStart.repeat(15);
