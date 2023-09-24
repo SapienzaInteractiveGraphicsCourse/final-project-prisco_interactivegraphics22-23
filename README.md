@@ -35,9 +35,9 @@ This is the Final Project for the course of Interactive Graphics, A.Y. 2022/2023
 |Browser|Performance|recommended|
 |:---|:---|:---:|
 |Edge|Good Performance|⭐⭐⭐|
-|Chrome|Good Performance on some computers|⭐⭐|
-|Firefox|Bad Performance|❌|
-|Safari|Bad Performance|❌|
+|Chrome|Good Performance|⭐⭐⭐|
+|Firefox|Not Very Good Performance|❌|
+|Safari|Not Very Good Performance|❌|
 
 ## 🎮 Play the game
 
@@ -49,5 +49,5 @@ This is the Final Project for the course of Interactive Graphics, A.Y. 2022/2023
 - `S` or `⬇️`: slide
 - `Space` or `Escape`: pause and resume game
 
-### Play the game at the following link: [https://sapienzainteractivegraphicscourse.github.io/final-project-prisco_interactivegraphics22-23/](https://sapienzainteractivegraphicscourse.github.io/final-project-prisco_interactivegraphics22-23/)
+### Play the game at the following link: [https://sapienzainteractivegraphicscourse.github.io/final-project-super-mario-runner/](https://sapienzainteractivegraphicscourse.github.io/final-project-super-mario-runner/)
 
