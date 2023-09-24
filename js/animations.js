@@ -859,6 +859,7 @@ function characterIdleAnimation(character) {
 
 
 function moveCharacterForward(scene, camera, directionalLight, directionalLightTarget) {
+
     /* ----- BODY MOVEMENT ----- */
     var animationTime = (-settings.endPosition / settings.speed)*1000;
 
@@ -3227,9 +3228,9 @@ function initMatrix() {
 
                     // SPACE
                     if(settings.environment == "space") {
-                        var spawnProbability = 0.5;
+                        var spawnProbability = 0.25;
                         if(settings.quality == "low") {
-                            spawnProbability = 0.3;
+                            spawnProbability = 0.1;
                         }
                         for(var x=1; x<iMax; x=x+3) {
                             for(var y=Math.floor(jMax/2)-6; y<Math.floor(jMax/2); y=y+3) {

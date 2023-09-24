@@ -254,6 +254,10 @@ function load3dModels() {
 		}
 	};
 
+
+    document.getElementById("progressBar").style.width = 0;
+    document.getElementById("progressBar-text").innerHTML = "0%";
+
 	modelsLoaderManager.onProgress = (url, itemsLoaded, itemsTotal) => {
 		console.log("Loading models... ", (itemsLoaded / itemsTotal * 100).toFixed(2), '%');
         document.getElementById("progressBar").style.width = (itemsLoaded / itemsTotal * 100) + "%" ;
@@ -300,6 +304,10 @@ function loadTextures() {
 		}
 	};
 
+
+    document.getElementById("progressBar").style.width = 0;
+    document.getElementById("progressBar-text").innerHTML = "0%";
+
 	texturesLoaderManager.onProgress = (url, itemsLoaded, itemsTotal) => {
 		console.log("Loading textures... ", (itemsLoaded / itemsTotal * 100).toFixed(2), '%');
         document.getElementById("progressBar").style.width = (itemsLoaded / itemsTotal * 100) + "%" ;
@@ -337,6 +345,10 @@ function loadSounds() {
             document.getElementById("loadedText").innerHTML = "Loading complete! You can now enter the game";
 		}
 	};
+
+
+    document.getElementById("progressBar").style.width = 0;
+    document.getElementById("progressBar-text").innerHTML = "0%";
 
 	soundsLoaderManager.onProgress = (url, itemsLoaded, itemsTotal) => {
 		console.log("Loading sounds... ", (itemsLoaded / itemsTotal * 100).toFixed(2), '%');
@@ -481,7 +493,7 @@ function initScene() {
 
 function startGame() {
 
-    let variables = Object.keys(window);
+    // let variables = Object.keys(window);
     // console.log(variables);
 
     rendererSize.x = 1.0;
